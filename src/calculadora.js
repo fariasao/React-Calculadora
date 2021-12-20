@@ -42,12 +42,28 @@ function Calculadora() {
     }
   }
 
+  function acaoCalcular() {
+    if (numero2 === null) {
+      return
+    }
+    const resultado = calcular(parseFloat(numero1), parseFloat(numero2), operacao)
+    setTxtNumeros(resultado);
+  }
+
+  function limpar() {
+    setTxtNumeros('0');
+    setNumero1('0');
+    setNumero2(null);
+    setOperacao(null);
+  }
+
   return (
     <div class="container-fluid bg-dark text-light p-5">
       <Container class="display-4">
         <Row>
           <Col xs="3">
-            <Button variant="danger">C</Button>
+            <Button variant="danger"
+              onClick={limpar}>C</Button>
           </Col>
           <Col xs="8">
             <Form.Control type="text"
@@ -126,7 +142,8 @@ function Calculadora() {
               onClick={() =>adicionarNumero('.')}>.</Button>
           </Col>
           <Col>
-            <Button variant="success">=</Button>
+            <Button variant="success"
+              onClick={acaoCalcular}>=</Button>
           </Col>
           <Col>
             <Button variant="warning"
