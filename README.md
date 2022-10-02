@@ -4,7 +4,7 @@ A aplicação frontend consiste em uma calculadora, onde a pessoa usuaria podera
 
 Para testar a aplicação, siga o passo a passo:
 
-1. Clone o repositório utilizando comandoÇ
+1. Clone o repositório utilizando comando
   
   º git clone git@github.com:fariasao/React-Calculadora.git
   
